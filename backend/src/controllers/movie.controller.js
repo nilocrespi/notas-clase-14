@@ -3,7 +3,7 @@ import {Movie} from "../models/movie.model.js"
 
 const getMovies = async () => {
     connectDB()
-    const movies = (await Movie.find()).sort({_id:-1})
+    const movies = await Movie.find().sort({_id:-1})
     return movies
 }
 
@@ -12,7 +12,7 @@ const getMovies = async () => {
 const createMovie = async (data) => {
     connectDB()
     const createdMovie = await Movie.create (data)
-    console.log (createdMovie)
+    return createdMovie
 }
 
 /*

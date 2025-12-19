@@ -28,6 +28,8 @@ const renderMovies = async () => {
     })
 }
 
+renderMovies()
+
 $form.addEventListener("submit", async (e) => {
     e.preventDefault()
 
@@ -66,4 +68,3 @@ $form.addEventListener("submit", async (e) => {
 
 })
 
-renderMovies()
